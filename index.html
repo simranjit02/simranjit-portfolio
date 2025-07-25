@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simranjit's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full p-4 bg-gray-800 shadow z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold">Simranjit Singh</h1>
+        <div class="space-x-4">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="h-screen flex items-center justify-center text-center px-4"
+      id="hero"
+    >
+      <div>
+        <h2 class="text-5xl font-extrabold mb-4" id="hero-title">
+          Hi, I'm Simranjit
+        </h2>
+        <p class="text-xl" id="hero-subtitle">A Developer & Tech Enthusiast</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg leading-relaxed">
+          I'm passionate about building web applications and always exploring
+          new tech. Currently learning SAP UI5 and ABAP.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg project-card">
+            <h3 class="text-xl font-semibold mb-2">TickMark (SaaS)</h3>
+            <p>Multi-Tenant KPI Dashboard using Next.js, MongoDB, Stripe.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-lg shadow-lg project-card">
+            <h3 class="text-xl font-semibold mb-2">LKC Admin Panel</h3>
+            <p>MERN stack admin portal for managing college data.</p>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 px-6">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+        <p class="mb-6">Reach out for collaboration or just say hi!</p>
+        <a
+          href="mailto:simranjitsingh58648@gmail.com"
+          class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full"
+          >Email Me</a
+        >
+      </div>
+    </section>
+
+    <script>
+      // GSAP Animations
+      gsap.from("#hero-title", { duration: 1, y: -50, opacity: 0 });
+      gsap.from("#hero-subtitle", {
+        duration: 1.2,
+        delay: 0.5,
+        y: 50,
+        opacity: 0,
+      });
+
+      gsap.utils.toArray(".project-card").forEach((card, index) => {
+        gsap.from(card, {
+          scrollTrigger: card,
+          duration: 1,
+          opacity: 0,
+          y: 100,
+          delay: index * 0.2,
+          ease: "power3.out",
+        });
+      });
+    </script>
+  </body>
+</html>
