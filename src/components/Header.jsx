@@ -21,16 +21,16 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-gray-300">
-          <Link href="#hero" className="hover:text-white transition">
+          <Link href="/" className="hover:text-white transition">
             Home
           </Link>
-          <Link href="#projects" className="hover:text-white transition">
+          <Link href="/projects" className="hover:text-white transition">
             Projects
           </Link>
-          <Link href="#about" className="hover:text-white transition">
+          <Link href="/about" className="hover:text-white transition">
             About
           </Link>
-          <Link href="#contact" className="hover:text-white transition">
+          <Link href="/contact" className="hover:text-white transition">
             Contact
           </Link>
         </nav>
