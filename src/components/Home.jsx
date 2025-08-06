@@ -17,7 +17,7 @@ export default function Home() {
       <section id="hero" className="">
         <div className="items-center justify-center text-center mt-32">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            🚧 Development in Progress
+            🚧 Development in Progress...
           </h1>
           <p className="text-lg text-gray-300">
             I'm currently building this portfolio. Please check back soon!
